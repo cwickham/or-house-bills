@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "data": {
+    "url": "data/all-stages.csv"
+  },
+  "description": "House Bills",
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
+  "width": 400,
+  "height": 100,
+  "transform": [
+    {
+      "filter": {
+        "field": "stage",
+        "equal": "third_reading_house"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          77
+        ],
+        "nice": false
+      },
+      "axis": null
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          20
+        ],
+        "nice": false
+      },
+      "axis": null
+    },
+    "color": {
+      "field": "proceed",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "TRUE",
+          "FALSE"
+        ],
+        "range": [
+          "#7F7F7F",
+          "#CCCCCC"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": {
+      "field": "tooltip",
+      "type": "nominal"
+    },
+    "href": {
+      "field": "url",
+      "type": "nominal"
+    }
+  },
+  "mark": "square"
+}

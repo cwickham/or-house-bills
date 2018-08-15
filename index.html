@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="pandoc" />
+
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Vega-lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@4"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc1"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+
+    <title>House Bills 2017</title>
+
+        
+        <link rel="stylesheet" href="basic.css" type="text/css" />
+        <link rel="stylesheet" href="annotate.css" type="text/css" />
+    
+  </head>
+
+  <body>
+  
+    <div class="container-fluid main-container">
+        
+    <style>
+.bill-proceed { 
+color:#7F7F7F;
+}
+.bill-dies { 
+color:#CCCCCC;
+}
+</style>
+    <p><h1>House Bills 2017 Regular session</h1><p>Of the 1525 bills introduced in the House, 415 became law.</p></p>
+    <p><div class="annotate-chamber rounded border">
+<h2 class="text-muted">House</h2>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">1525</h1>
+<p class="text-sm-right">bills are introduced in the house and are assigned to a committee.</p>
+</div>
+<div id="introduced"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count"></h1>
+<p></p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">465</h1>
+<p class="text-sm-right">pass out of committee and get their second and third readings in the house.</p>
+</div>
+<div id="first_reading_house"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count">1060</h1>
+<p>bills end the session in house committees.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">457</h1>
+<p class="text-sm-right">pass their third reading and leave the house for the senate.</p>
+</div>
+<div id="third_reading_house"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count">8</h1>
+<p>bills aren't approved or are referred back to a committee.</p>
+</div>
+</div>
+</div><div class="annotate-none">
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+</div><div class="annotate-chamber rounded border">
+<h2 class="text-muted">Senate</h2>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">457</h1>
+<p class="text-sm-right">house bills get their first reading in the senate.</p>
+</div>
+<div id="introduced_senate"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count"></h1>
+<p></p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">417</h1>
+<p class="text-sm-right">pass out of committee and get their second and third readings in the senate.</p>
+</div>
+<div id="first_reading_senate"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count">40</h1>
+<p>bills end the session in senate committees.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">416</h1>
+<p class="text-sm-right">pass their third reading and leave the senate.</p>
+</div>
+<div id="third_reading_senate"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count">1</h1>
+<p>bills aren't approved or are referred back to a committee.</p>
+</div>
+</div>
+</div><div class="annotate-none">
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+</div><div class="annotate-none">
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">416</h1>
+<p class="text-sm-right">are approved by both chambers and get officer signatures.</p>
+</div>
+<div id="passed_senate"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count">0</h1>
+<p>fail to be approved by both chambers.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">415</h1>
+<p class="text-sm-right">aren't vetoed by the governor.</p>
+</div>
+<div id="officer_signatures"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count">1</h1>
+<p>are vetoed by the governor.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<svg height="50" width="100" class="chevron float-sm-right">
+<polygon points="0,0 50,20 100,0 100,30 50,50 0,30" fill="#E5E5E5"></polygon>
+</svg>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-sm-3">
+<h1 class="bill-proceed bill-count text-sm-right">415</h1>
+<p class="text-sm-right">bills become law.</p>
+</div>
+<div id="governor_signature"></div>
+<div class="col-sm-3">
+<h1 class="bill-dies bill-count"></h1>
+<p></p>
+</div>
+</div>
+</div></p>
+    <script>
+vegaEmbed('#introduced','data/introduced.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#first_reading_house','data/first_reading_house.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#third_reading_house','data/third_reading_house.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#introduced_senate','data/introduced_senate.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#first_reading_senate','data/first_reading_senate.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#third_reading_senate','data/third_reading_senate.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#passed_senate','data/passed_senate.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#officer_signatures','data/officer_signatures.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#governor_signature','data/governor_signature.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+vegaEmbed('#chapter','data/chapter.json', {
+	  defaultStyle: true, 
+	  tooltip: {sanitize: (value) => String(value)},
+	  actions: false
+	}).catch(console.warn);
+</script>  
+    
+    
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  
+  </body>
+
+</html>

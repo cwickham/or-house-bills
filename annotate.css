@@ -1,0 +1,17 @@
+.annotate-chamber {
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+}
+
+.annotate-none {
+  padding: 10px;
+  margin: 0px;
+}
+
+.annotate-chamber h2 {
+  font-size: 0.8em;
+}
+
+.chevron {
+  margin-bottom: 10px;
+}
